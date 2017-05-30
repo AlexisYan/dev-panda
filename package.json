@@ -12,5 +12,19 @@
     "passport": "^0.3.2",
     "passport-facebook": "^2.1.1",
     "serve-favicon": "^2.4.3"
-  }
+  },
+  "name": "dev-panda",
+  "description": "",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexisYan/dev-panda.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexisYan/dev-panda/issues"
+  },
+  "homepage": "https://github.com/AlexisYan/dev-panda#readme"
 }
