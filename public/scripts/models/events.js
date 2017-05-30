@@ -7,7 +7,7 @@ navigator.geolocation.getCurrentPosition(position => {
   $.ajax({
     url: '/venues/meetup',
     method: 'post',
-    data: latLon
+    data: {latLon}
   })
   .then(data => meetup = data)
   .then(
