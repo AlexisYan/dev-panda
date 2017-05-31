@@ -5,7 +5,7 @@ const SEATTLE = {lat: 47.618347, lng: -122.351977};
 
 function initMap(latLon = SEATTLE) {
   map = new google.maps.Map(document.getElementById('map'), {
-    center:latLon ,
+    center: latLon,
     zoom: 12
   });
 }
