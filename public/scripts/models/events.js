@@ -1,10 +1,7 @@
 'use strict';
 
 navigator.geolocation.getCurrentPosition(position => {
-  const meetup = [];
-  const eventbrite =[];
   const latLon = [position.coords.latitude, position.coords.longitude]
-  console.log('pre-ajax1')
   $.ajax({
     url: '/venues/meetup',
     method: 'post',
@@ -12,17 +9,14 @@ navigator.geolocation.getCurrentPosition(position => {
     data: { latLon }
   })
   .then(data => {
-    console.log('meetup data', data)
-    meetup = data
-  })
-  .then(
+    console.log('meetup.com data:', data);
     $.ajax({
-    url: '/venues/eventbrite',
-    method: 'post',
-    data: { latLon }
-  }))
-  .then(data => {
-    console.log('data', data)
-    eventbrite = data
-  })
-})
+      url: '/venues/eventbrite',
+      method: 'post',
+      data: { latLon }
+    })
+    .then(data => {
+      console.log('eventbrite.com data:', data)
+    });
+  });
+});

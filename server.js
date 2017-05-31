@@ -14,20 +14,13 @@ if(process.env.node_env !== 'production') {
 }
 
 app.post('/venues/meetup', (req, res) => {
-  console.log('reqbody venues meetup', req.body)
   const [lat, lon] = req.body.latLon;
-  console.log(lat)
-  console.log(process.env.MEETUP)
   fetch(`https://api.meetup.com/find/events?key=${process.env.MEETUP}&sign=true&photo-host=public&lon=${lon}&text=tech&lat=${lat}`)
   .then(json => json.json())
-  .then(response => {
-    console.log(response)
-    res.send(response);
-  });
+  .then(response => res.send(response));
 });
 
 app.post('/venues/eventbrite', (req, res) => {
-  console.log(req.body)
   const [lat, lon] = req.body.latLon;
   fetch(`https://www.eventbriteapi.com/v3/events/search/?q=tech&location.within=20mi&location.latitude=${lat}&location.longitude=${lon}&token=${process.env.EVENTBRITE}`)
   .then(json => json.json())
