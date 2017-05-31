@@ -10,13 +10,8 @@ navigator.geolocation.getCurrentPosition(position => {
   })
   .then(data => {
     console.log('meetup.com data:', data);
-    $.ajax({
-      url: '/venues/eventbrite',
-      method: 'post',
-      data: { latLon }
-    })
-    .then(data => {
-      console.log('eventbrite.com data:', data)
-    });
+    let template = Handlebars.compile($('#eventlist-template').text());
+    console.log('rendering events');
+    return data.forEach(event => $('#list-events').append(template(event)));
   });
 });
