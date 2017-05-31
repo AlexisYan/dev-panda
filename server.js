@@ -26,7 +26,10 @@ app.post('/venues/eventbrite', (req, res) => {
   .then(json => json.json())
   .then(response => res.send(response));
 });
-
+app.post('/venues/googlemaps', (req, res) => {
+  const [lat, lon] = req.body.latLon;
+  fetch(`https://maps.googleapis.com/maps/api/place/add/json?key=AIzaSyB_w-6PLAE0kCWOTePYzst_EVsCTQRSsI4=${lat}&location.longitude=${lon}`.then(json => json.json()).then(response => res.send(response)));
+});
 app.get('/', (req, res) => {
   // const user = req.user && { profileId: req.user.profileId, _id: req.user._id };
   res.sendFile(path.join(__dirname+'/public/index.html'));
