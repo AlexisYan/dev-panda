@@ -1,4 +1,11 @@
 'use strict';
+let map;
+  function initMap(latLon = {lat: 47.618347, lng: -122.351977}) {
+    map = new google.maps.Map(document.getElementById('map'), {
+      center:latLon ,
+      zoom: 12
+    });
+  }
 
 navigator.geolocation.getCurrentPosition(position => {
   const latLon = [position.coords.latitude, position.coords.longitude]
@@ -16,6 +23,14 @@ navigator.geolocation.getCurrentPosition(position => {
       return event
     })
     console.log('rendering events');
-    return data.forEach(event => $('#list-events').append(template(event)));
+    data.forEach(event => {
+      $('#list-events').append(template(event));
+
+        new google.maps.Marker({
+        position:{lat: event.group.lat, lng: event.group.lon},
+        map: map,
+        title: 'Marker'
+      })
+    })
   });
 });
