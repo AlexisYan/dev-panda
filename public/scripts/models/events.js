@@ -19,11 +19,13 @@ navigator.geolocation.getCurrentPosition(position => {
     let template = Handlebars.compile($('#eventlist-template').text());
     console.log('rendering events');
     data.forEach(event => {
-      $('#list-events').append(template(event))});
+      $('#list-events').append(template(event));
+
         new google.maps.Marker({
-        position:{lat: event.group.lat, lon: event.group.lon},
+        position:{lat: event.group.lat, lng: event.group.lon},
         map: map,
         title: 'Marker'
       })
+    })
   });
 });
