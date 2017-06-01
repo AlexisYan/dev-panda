@@ -49,6 +49,10 @@ const renderMapData = data => {
   setTeasers();
   deleteEvents();
   $('#map').show();
+  initMap();
+  fetchMeetupData();
+  appendMapMarker();
+  renderMapData();
 };
 
 $(() => fetchMeetupData(renderMapData));

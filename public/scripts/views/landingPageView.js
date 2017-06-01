@@ -8,6 +8,7 @@ var app = app || {};
 
   landingView.landingPage = function(){
     $('#aboutPage').hide();
+    $('#map').hide();
   };
 
   landingView.landingPage();
