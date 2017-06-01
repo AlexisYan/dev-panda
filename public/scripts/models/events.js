@@ -1,7 +1,7 @@
 'use strict';
 
-
 let map, latLon;
+const eventData = [];
 const SEATTLE = {lat: 47.618347, lng: -122.351977};
 
 function initMap(latLon = SEATTLE) {
@@ -14,37 +14,34 @@ function initMap(latLon = SEATTLE) {
 navigator.geolocation.getCurrentPosition(position =>
   latLon = [position.coords.latitude, position.coords.longitude])
 
-  $(() => {
+const fetchMeetupData = callback => {
+  $('#find-meetups').on('click', () =>
+    $.ajax({
+      url: '/venues/meetup',
+      method: 'post',
+      data: { latLon }
+    }).then(callback));
+}
 
-    $('#find-meetups').on('click', () => {
-      $.ajax({
-        url: '/venues/meetup',
-        method: 'post',
-        data: { latLon }
-      })
-      .then(data => {
-        console.log('meetup.com data:', data);
-        let template = Handlebars.compile($('#eventlist-template').text());
-        data = data.map(function(event){
-          event.time = new Date(event.time)
-          return event
-        })
-        data.forEach(event => {
-          $('#list-events').append(template(event));
-          let marker = new google.maps.Marker({
-            position:{lat: event.group.lat, lng: event.group.lon},
-            map,
-            title: 'Marker'
-          });
-          let infoWindow = new google.maps.InfoWindow({
-            content: `${event.description}`
-          });
-          marker.addListener('click', function() {
-            infoWindow.open(map, marker);
-          });
-        });
-        setTeasers();
-        deleteEvents();
-      });
+const template = Handlebars.compile($('#eventlist-template').text());
+
+const renderMapData = data => {
+  data.forEach(event => {
+    event.time = new Date(event.time)
+    eventData.push(event);
+    $('#list-events').append(template(event));
+    let marker = new google.maps.Marker({
+      position:{lat: event.group.lat, lng: event.group.lon},
+      map,
+      title: 'Marker'
     });
+    let infoWindow = new google.maps.InfoWindow({
+      content: `${event.description}`
+    });
+    marker.addListener('click', () => infoWindow.open(map, marker));
   });
+  setTeasers();
+  deleteEvents();
+};
+
+$(() => fetchMeetupData(renderMapData));
