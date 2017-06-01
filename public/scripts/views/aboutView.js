@@ -8,7 +8,7 @@ var app = app || {};
       e.preventDefault();
       $('#map').hide();
       $('.tab').hide();
-      $('#aboutPage').show();
+      $('#aboutPage').fadeIn('slow');
       $('#head').hide();
     });
   };
