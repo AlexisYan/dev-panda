@@ -4,11 +4,10 @@ function setTeasers() {
   console.log($('#list-events p'));
   $('#list-events p').hide();
   $('.description').on('click', function(e) {
-    console.log(this.childNodes);
-    $(this.childNodes).show()
+    $(this.parentNode.parentNode.childNodes).show()
     $(this).text('Show Less -');
-    // $('#description').addClass('show-less');
-    // $('#description').removeClass('description');
+    $('#description').addClass('show-less');
+    $('#description').removeClass('description');
   });
 };
 
