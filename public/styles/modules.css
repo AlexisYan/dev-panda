@@ -1,28 +1,33 @@
 
-.title{
+.title-panda{
   margin-left: 40%;
   display: block;
-
 }
 .panda-icon{
   height:80px;
   width: 80px;
+  float: left;
   display: inline-block;
   float: left;
+  margin-top: 7%;
 }
-.app-name{
-  display: inline-block;
+.name{
   float: left;
-  color: black;
+  color: white;
+  font-size: 5em;
+  display: inline-block;
 }
-.fa-icons{
+.icons{
   background-color: white;
+  display: block;
+  margin-top: 10px;
 }
 
 .fa-github {
   float:right;
   margin-left: 150px;
   text-align: center;
+
 }
 .fa-home{
   float:right;
