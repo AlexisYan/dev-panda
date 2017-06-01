@@ -12,6 +12,7 @@ function setTeasers() {
     hideDescription();
   });
 };
+
 function hideDescription() {
   $('.show-less').off().on('click', function(e) {
     console.log(e.target, 'hide', this.siblings);
@@ -25,7 +26,11 @@ function hideDescription() {
 
 function deleteEvents() {
   $('.delete-button').on('click',function(e) {
-    console.log(this.parentNode.childNodes);
     $(this.parentNode.childNodes).fadeOut(150)
-})
+    const eventId = typeof $(this).data('id') === 'number' ? $(this).data('id').toString() : $(this).data('id');
+    eventData = eventData.filter(event => event.id !== eventId);
+    mapMarkers.forEach(marker => marker.setMap(null));
+    mapMarkers = [];
+    eventData.forEach(event => appendMapMarker(event));
+  });
 }
