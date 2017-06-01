@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link href="styles/base.css" rel="stylesheet" type="text/css">
-    <link href="styles/layout.css" rel="stylesheet" type="text/css">
-    <link href="styles/modules.css" rel="stylesheet" type="text/css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
-    <script id="eventlist-template" type="text/x-handlebars-template">
-      <li>
-        <h3>{{name}}</h3>
-        <p>{{time}}</p>
-        {{{description}}}
-        <a>{{link}}</a>
-        <p>{{fee.label}}</p>
-        <p>{{fee.amount}}</p>
-        <a href="/event/{{event_id}}" class="read-on">Read on &rarr;</a>
-      </li>
-    </script>
-  </head>
-  <body>
+<head>
+  <link href="styles/base.css" rel="stylesheet" type="text/css">
+  <link href="styles/layout.css" rel="stylesheet" type="text/css">
+  <link href="styles/modules.css" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
 
+  <script id="eventlist-template" type="text/x-handlebars-template">
+    <li>
+      <h3>{{name}}</h3>
+      <h5>{{time}}</h5>
+      {{{description}}}
+      <a>{{link}}</a>
+      <p>{{fee.label}}</p>
+      <p>{{fee.amount}}</p>
+      <a class="description" id="description">Description &rarr;</a>
+    </li>
+  </script>
+</head>
+<body>
     <div id='landing' class='section'>
       <div class="title">
         <img src="icons/dev-panda.jpg">
