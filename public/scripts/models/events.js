@@ -1,5 +1,6 @@
 'use strict';
 
+
 let map, latLon;
 const SEATTLE = {lat: 47.618347, lng: -122.351977};
 
