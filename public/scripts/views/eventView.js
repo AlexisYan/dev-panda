@@ -11,3 +11,10 @@ function setTeasers() {
     $('#description').removeClass('description');
   });
 };
+
+function deleteEvents() {
+  console.log('delete is running');
+  $('.delete-button').on('click',function(e) {
+    $(this).fadeOut(150)
+})
+}

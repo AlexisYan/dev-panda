@@ -44,6 +44,7 @@ navigator.geolocation.getCurrentPosition(position =>
           });
         });
         setTeasers();
+        deleteEvents();
       });
     });
   });
