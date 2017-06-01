@@ -33,6 +33,5 @@ navigator.geolocation.getCurrentPosition(position => {
       })
     })
     setTeasers();
-    hideTag()
   });
 });
