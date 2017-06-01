@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <section id="write" class="tab-content">
+        <h1>Leave your comments</h1>
+        <form action="#" id="new-form">
+          <label>
+            <input type="text" id="article-title" placeholder="Article title" required>
+          </label>
+          <textarea id="article-body" rows="8" cols="40" required></textarea>
+          <label>
+            <input type="text" id="article-author" placeholder="Author Name" required>
+          </label>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+      <section id="commentsAll"></section>
+      <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+      <script src="scripts/views/pastView.js"></script>
+      <script>
+        commentView.initNewArticlePage();
+    </script>
+  </body>
+</html>
