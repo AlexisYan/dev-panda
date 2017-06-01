@@ -32,5 +32,7 @@ navigator.geolocation.getCurrentPosition(position => {
         title: 'Marker'
       })
     })
+    setTeasers();
+    hideTag()
   });
 });
