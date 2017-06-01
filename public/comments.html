@@ -2,6 +2,21 @@
 <html>
   <head>
     <title></title>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+    <script id="article-template" type="text/x-handlebars-template">
+     <article
+       class="clearfix"
+       data-author="{{author}}">
+       <header>
+         <h1>{{title}}</h1>
+         <div class="byline">
+           By <address>{{author}}</address>
+         </div>
+       </header>
+       <section class="article-body">{{{body}}}</section>
+       <!-- <a href="#" class="read-on">Read on &rarr;</a> -->
+     </article>
+   </script>
   </head>
   <body>
     <section id="write" class="tab-content">
@@ -22,9 +37,7 @@
         src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
-      <script src="scripts/views/pastView.js"></script>
-      <script>
-        commentView.initNewArticlePage();
-    </script>
+      <script src="scripts/models/comments.js"></script>
+      <script src="scripts/views/commentsView.js"></script>
   </body>
 </html>
