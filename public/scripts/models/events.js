@@ -1,7 +1,8 @@
 'use strict';
 
 let map, latLon;
-const eventData = [];
+let mapMarkers = [];
+let eventData = [];
 const SEATTLE = {lat: 47.618347, lng: -122.351977};
 
 function initMap(latLon = SEATTLE) {
@@ -25,20 +26,25 @@ const fetchMeetupData = callback => {
 
 const template = Handlebars.compile($('#eventlist-template').text());
 
+const appendMapMarker = event => {
+  let marker = new google.maps.Marker({
+    position:{lat: event.group.lat, lng: event.group.lon},
+    map,
+    title: 'Marker',
+  });
+  let infoWindow = new google.maps.InfoWindow({
+    content: `${event.description}`
+  });
+  marker.addListener('click', () => infoWindow.open(map, marker));
+  mapMarkers.push(marker);
+}
+
 const renderMapData = data => {
   data.forEach(event => {
     event.time = new Date(event.time)
     eventData.push(event);
     $('#list-events').append(template(event));
-    let marker = new google.maps.Marker({
-      position:{lat: event.group.lat, lng: event.group.lon},
-      map,
-      title: 'Marker'
-    });
-    let infoWindow = new google.maps.InfoWindow({
-      content: `${event.description}`
-    });
-    marker.addListener('click', () => infoWindow.open(map, marker));
+    appendMapMarker(event);
   });
   setTeasers();
   deleteEvents();
