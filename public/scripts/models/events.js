@@ -48,6 +48,7 @@ const renderMapData = data => {
   });
   setTeasers();
   deleteEvents();
+  $('#map').show();
 };
 
 $(() => fetchMeetupData(renderMapData));

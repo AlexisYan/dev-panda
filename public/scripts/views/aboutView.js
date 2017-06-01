@@ -6,7 +6,7 @@ var app = app || {};
   aboutView.aboutPage = function(){
     $('#about-tab').on('click', function(e){
       e.preventDefault();
-      $('#map').hide();
+      $('#find-meetups').hide();
       $('.tab').hide();
       $('#aboutPage').fadeIn('slow');
       $('#head').hide();
