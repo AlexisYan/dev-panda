@@ -34,3 +34,6 @@ html, body {
   outline: none;
   border: none;
 }
+.clear-fix {
+  clear: both;
+}
