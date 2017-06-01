@@ -1,6 +1,8 @@
+
 .title{
   margin-left: 40%;
   display: block;
+
 }
 .panda-icon{
   height:80px;
@@ -13,8 +15,8 @@
   float: left;
   color: white;
 }
-.fa{
-  margin-left: 10px;
+.fa-icons{
+  background-color: white;
 }
 .fa-github {
   float:right;

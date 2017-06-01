@@ -8,7 +8,7 @@ html, body {
   background-size: cover;
 }
 #map {
-      height: 25%;
+      height: 50%;
       width: 75%;
     }
 .delete-button {
