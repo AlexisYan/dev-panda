@@ -14,34 +14,37 @@ function initMap(latLon = SEATTLE) {
 navigator.geolocation.getCurrentPosition(position =>
   latLon = [position.coords.latitude, position.coords.longitude])
 
-$(() => {
+  $(() => {
 
-  $('#find-meetups').on('click', () => {
-    $.ajax({
-      url: '/venues/meetup',
-      method: 'post',
-      data: { latLon }
-    })
-    .then(data => {
-      console.log('meetup.com data:', data);
-      let template = Handlebars.compile($('#eventlist-template').text());
-      console.log('rendering events');
-      data.forEach(event => {
-        $('#list-events').append(template(event));
-        let marker = new google.maps.Marker({
-          position:{lat: event.group.lat, lng: event.group.lon},
-          map,
-          title: 'Marker'
+    $('#find-meetups').on('click', () => {
+      $.ajax({
+        url: '/venues/meetup',
+        method: 'post',
+        data: { latLon }
+      })
+      .then(data => {
+        console.log('meetup.com data:', data);
+        let template = Handlebars.compile($('#eventlist-template').text());
+        data = data.map(function(event){
+          event.time = new Date(event.time)
+          return event
+        })
+        data.forEach(event => {
+          $('#list-events').append(template(event));
+          let marker = new google.maps.Marker({
+            position:{lat: event.group.lat, lng: event.group.lon},
+            map,
+            title: 'Marker'
+          });
+          let infoWindow = new google.maps.InfoWindow({
+            content: `${event.description}`
+          });
+          marker.addListener('click', function() {
+            infoWindow.open(map, marker);
+          });
         });
-        let infoWindow = new google.maps.InfoWindow({
-          content: `${event.description}`
-        });
-        marker.addListener('click', function() {
-          infoWindow.open(map, marker);
-        });
+        setTeasers();
+        deleteEvents();
       });
     });
-    setTeasers();
-    // hideTag()
   });
-});
