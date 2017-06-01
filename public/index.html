@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="https://use.fontawesome.com/59f37b91f4.js"></script>
-    <link href="styles/base.css" rel="stylesheet" type="text/css">
-    <link href="styles/layout.css" rel="stylesheet" type="text/css">
-    <link href="styles/modules.css" rel="stylesheet" type="text/css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
- <script id="eventlist-template" type="text/x-handlebars-template">
+<head>
+  <script src="https://use.fontawesome.com/59f37b91f4.js"></script>
+  <link href="styles/base.css" rel="stylesheet" type="text/css">
+  <link href="styles/layout.css" rel="stylesheet" type="text/css">
+  <link href="styles/modules.css" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+  <script id="eventlist-template" type="text/x-handlebars-template">
+    <ul>
+    <button class="delete-button">X</button>
+    <h3>{{name}}</h3>
+    <h5>{{time}}</h5>
     <li>
+<<<<<<< HEAD
       <button class="delete-button">X</button>
       <h3>{{name}}</h3>
       <h5>{{time}}</h5>
@@ -17,10 +22,19 @@
         <li><p>{{fee.label}}</p></li>
         <li><p>{{fee.amount}}</p></li>
       </ul>
+=======
+      <a class="description" id="">Description &rarr;</a>
+      {{{description}}}
+      <a>{{link}}</a>
+      <p>{{fee.label}}</p>
+      <p>{{fee.amount}}</p>
+>>>>>>> 999b58dbd4d3b3147ac132045fd5147ab9920ab3
     </li>
+  </ul>
   </script>
   </head>
   <body>
+<<<<<<< HEAD
     <ul>
       <a href="/github" class="fa fa-github" aria-hidden="true"></a>
       <a href="/" class="fa fa-home" aria-hidden="true"></a>
@@ -33,6 +47,20 @@
       <h1>DEV-PANDA<h1>
       </div>
       <div class="body" id="head">
+=======
+  <div id='landing' class='section'>
+    <div class="title">
+      <img class="panda-icon" src="icons/dev-panda.jpg">
+      <h1 class="app-name">DEV-PANDA<h1>
+    </div>
+      <ul class="fa-icons">
+        <a href="/github" class="fa fa-github fa-4x" aria-hidden="true"></a>
+        <a href="/" class="fa fa-home fa-4x" aria-hidden="true"></a>
+        <a href="/map"class="fa fa-map fa-4x" aria-hidden="true"></a>
+        <a href="/about" class="fa fa-address-book fa-4x" aria-hidden="true"></a>
+      </ul>
+      <div class="body">
+>>>>>>> 999b58dbd4d3b3147ac132045fd5147ab9920ab3
         <p>fdadfajsdfjklaksdjfksajfksjcjhfsdhafu</p>
         <button id="find-meetups" type="button">Find Meet Ups</button>
       </div>
