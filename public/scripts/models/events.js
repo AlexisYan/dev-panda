@@ -43,7 +43,7 @@ navigator.geolocation.getCurrentPosition(position =>
             infoWindow.open(map, marker);
           });
         });
+        setTeasers();
       });
-      setTeasers();
     });
   });
