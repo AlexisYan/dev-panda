@@ -33,19 +33,20 @@
       <button class="delete-button">X</button>
       <h3>{{name}}</h3>
       <h5>{{time}}</h5>
-      {{{description}}}
-      <a>{{link}}</a>
-      <p>{{fee.label}}</p>
-      <p>{{fee.amount}}</p>
-      <a href="#" class="description" id="description">Description &rarr;</a>
+      <ul class="description" id="description">Description &rarr;
+        <li>{{{description}}}</li>
+        <li><a>{{link}}</a></li>
+        <li><p>{{fee.label}}</p></li>
+        <li><p>{{fee.amount}}</p></li>
+      </ul>
     </li>
   </script>
 </head>
 <body>
-    <div id='landing' class='section'>
-      <div class="title">
-        <img src="icons/dev-panda.jpg">
-        <h1>DEV-PANDA<h1>
+  <div id='landing' class='section'>
+    <div class="title">
+      <img src="icons/dev-panda.jpg">
+      <h1>DEV-PANDA<h1>
       </div>
       <div class="body">
         <p>fdadfajsdfjklaksdjfksajfksjcjhfsdhafu</p>
@@ -59,13 +60,13 @@
     </div>
 
     <script
-      src="https://code.jquery.com/jquery-3.2.1.min.js"
-      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-      crossorigin="anonymous"></script>
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
     <script src="scripts/models/events.js" type="text/javascript"></script>
     <script src="scripts/views/aboutView.js" type="text/javascript"></script>
     <script src="scripts/views/eventView.js" type="text/javascript"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrkuWV8MgzB1vQZFVi6Nx8mhslLfufwR0&callback=initMap"
     async defer></script>
   </body>
-</html>
+  </html>
