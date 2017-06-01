@@ -15,6 +15,6 @@ function setTeasers() {
 function deleteEvents() {
   console.log('delete is running');
   $('.delete-button').on('click',function(e) {
-    $(this).fadeOut(150)
+    $(this.parentNode.childNodes).fadeOut(150)
 })
 }
