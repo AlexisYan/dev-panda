@@ -6,29 +6,7 @@
     <link href="styles/layout.css" rel="stylesheet" type="text/css">
     <link href="styles/modules.css" rel="stylesheet" type="text/css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
-    <script id="eventlist-template" type="text/x-handlebars-template">
-      <li>
-        <h3>{{name}}</h3>
-        <p>{{time}}</p>
-        {{{description}}}
-        <a>{{link}}</a>
-        <p>{{fee.label}}</p>
-        <p>{{fee.amount}}</p>
-        <a href="/event/{{event_id}}" class="read-on">Read on &rarr;</a>
-      </li>
-    </script>
-  </head>
-  <body>
-    <ul>
-      <a href="/github" class="fa fa-github" aria-hidden="true"></a>
-      <a href="/" class="fa fa-home" aria-hidden="true"></a>
-      <a href="/map"class="fa fa-map" aria-hidden="true"></a>
-      <a href="/about" class="fa fa-address-book" aria-hidden="true"></a>
-    </ul>
-
-
-
-  <script id="eventlist-template" type="text/x-handlebars-template">
+ <script id="eventlist-template" type="text/x-handlebars-template">
     <li>
       <button class="delete-button">X</button>
       <h3>{{name}}</h3>
@@ -41,8 +19,14 @@
       </ul>
     </li>
   </script>
-</head>
-<body>
+  </head>
+  <body>
+    <ul>
+      <a href="/github" class="fa fa-github" aria-hidden="true"></a>
+      <a href="/" class="fa fa-home" aria-hidden="true"></a>
+      <a href="/map"class="fa fa-map" aria-hidden="true"></a>
+      <a href="/about" class="fa fa-address-book" aria-hidden="true"></a>
+    </ul>
   <div id='landing' class='section'>
     <div class="title">
       <img src="icons/dev-panda.jpg">
