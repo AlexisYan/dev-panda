@@ -1,14 +1,40 @@
 
+.title{
+  margin-left: 40%;
+  display: block;
+
+}
+.panda-icon{
+  height:80px;
+  width: 80px;
+  display: inline-block;
+  float: left;
+}
+.app-name{
+  display: inline-block;
+  float: left;
+  color: white;
+}
+.fa-icons{
+  background-color: white;
+}
 .fa-github {
   float:right;
-
+  margin-left: 150px;
+  text-align: center;
 }
 .fa-home{
   float:right;
+  margin-left: 150px;
+  text-align: center;
 }
 .fa-map{
   float:right;
+  margin-left: 150px;
+  text-align: center;
 }
 .fa-address-book {
   float:right;
+  margin-left: 150px;
+  text-align: center;
 }
