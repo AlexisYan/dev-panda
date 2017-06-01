@@ -5,9 +5,6 @@
 
   commentView.initNewArticlePage = function() {
     $('.tab-content').show();
-    // $('#article-json').on('focus', function() {
-    //   $(this).select();
-    // });
     $('#new-form').on('submit', commentView.submit);
   };
 
