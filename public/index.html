@@ -3,13 +3,12 @@
   <head>
     <script src="https://use.fontawesome.com/59f37b91f4.js"></script>
     <link href="styles/base.css" rel="stylesheet" type="text/css">
-    <link href="styles/layout.css" rel="stylesheet" type="text/css">
     <link href="styles/modules.css" rel="stylesheet" type="text/css">
+    <link href="styles/layout.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
     <script id="eventlist-template" type="text/x-handlebars-template">
       <ul class='event'>
-        <button class="delete-button" data-id='{{id}}'>X</button>
         <h3>{{name}}</h3>
         <h5>{{time}}</h5>
         <li>
@@ -19,15 +18,18 @@
           <p>{{fee.label}}</p>
           <p>{{fee.amount}}</p>
         </li>
+        <button class="delete-button" data-id='{{id}}'>Hide Meetup</button>
       </ul>
     </script>
   </head>
   <body>
 
     <div id="title-box">
-      <img class="panda-icon" src="icons/dev-panda.png">
-      <h1 class="name">PANDA</h1>
-    <div>
+      <div id='logo'>
+        <img id="panda-icon" src="icons/dev-panda.png">
+        <h1 id="title">PANDA</h1>
+      </div>
+    </div>
 
     <ul id="icons">
       <a href="https://github.com/AlexisYan/dev-panda" class="fa fa-github fa-4x" aria-hidden="true"></a>
@@ -37,22 +39,56 @@
 
     <div id='landing'>
       <div id="landing-body">
-        <p>Dev Panda is a quick, convienient way for developers to find and view tech meetups in their area.</p>
-        <p>With one click you can view local meetups, see details, and get an overall sense of what is happening in your area</p>
+        <p>Dev Panda is a quick, convienient way for developers to find and view tech meetups in their area.  With one click you can view local meetups, see details, and get an overall sense of what is happening in your area.</p>
       </div>
-      <button id="find-meetups" type="button">Find Meet Ups</button>
+      <button id="find-meetups" type="button">Find Meet Ups!</button>
     </div>
 
     <div class='main' id='map'></div>
     <ul class='main' id="list-events"></ul>
 
     <div id="about-page">
-      <ul id="about-body">
-        <li class='profile'> Alexis: part of the best team in the world</li>
-        <li class='profile'> Rylee: part of the best team in the world </li>
-        <li class='profile'> Michael: part of the best team in the world </li>
-        <li class='profile'> Stephanie: part of the best team in the world </li>
-      </ul>
+
+      <a href="#">
+        <div class='profile'>
+          <img class='profile-pic' src="#">
+          <div class='profile-body'>
+            <h3 class='profile-name'>Alexis</h3>
+            <p class='profile-text'>part of the best team in the world</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="#">
+        <div class='profile'>
+          <img class='profile-pic' src="#">
+          <div class='profile-body'>
+            <h3 class='profile-name'>Rylee</h3>
+            <p class='profile-text'>part of the best team in the world</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://github.com/MichaelWStuart">
+        <div class='profile'>
+          <img class='profile-pic' src="https://avatars3.githubusercontent.com/u/18186778?v=3&s=460">
+          <div class='profile-body'>
+            <h3 class='profile-name'>Michael</h3>
+            <p class='profile-text'>I love javascript and I love codefellows.  Need I say more?</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="#">
+        <div class='profile'>
+          <img class='profile-pic' src="#">
+          <div class='profile-body'>
+            <h3 class='profile-name'>Alexis</h3>
+            <p class='profile-text'>part of the best team in the world</p>
+          </div>
+        </div>
+      </a>
+
     </div>
 
     <script
