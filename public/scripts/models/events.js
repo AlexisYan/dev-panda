@@ -41,6 +41,8 @@ const appendMapMarker = event => {
 }
 
 const renderMapData = data => {
+  $('#map').show();
+  initMap();
   data.forEach(event => {
     event.time = new Date(event.time)
     eventData.push(event);
@@ -49,11 +51,6 @@ const renderMapData = data => {
   });
   setTeasers();
   deleteEvents();
-  $('#map').show();
-  initMap();
-  fetchMeetupData();
-  appendMapMarker();
-  renderMapData();
 };
 
 $(() => fetchMeetupData(renderMapData));
