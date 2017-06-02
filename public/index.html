@@ -3,124 +3,100 @@
   <head>
     <script src="https://use.fontawesome.com/59f37b91f4.js"></script>
     <link href="styles/base.css" rel="stylesheet" type="text/css">
-    <link href="styles/layout.css" rel="stylesheet" type="text/css">
     <link href="styles/modules.css" rel="stylesheet" type="text/css">
+    <link href="styles/layout.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
     <script id="eventlist-template" type="text/x-handlebars-template">
       <ul class='event'>
-        <button class="delete-button" data-id='{{id}}'>X</button>
         <h3>{{name}}</h3>
         <h5>{{time}}</h5>
+        <a>{{link}}</a>
         <li>
           <a class="description" id="">Description &rarr;</a>
           {{{description}}}
-          <a>{{link}}</a>
           <p>{{fee.label}}</p>
           <p>{{fee.amount}}</p>
         </li>
+        <button class="delete-button" data-id='{{id}}'>Hide Meetup</button>
       </ul>
     </script>
   </head>
   <body>
 
+    <div id="title-box">
+      <div id='logo'>
+        <img id="panda-icon" src="icons/dev-panda.png">
+        <h1 id="title">PANDA</h1>
+      </div>
+    </div>
+
+    <ul id="icons">
+      <a href="https://github.com/AlexisYan/dev-panda" class="fa fa-github fa-4x" aria-hidden="true"></a>
+      <a href='#' class="map-tab fa fa-map fa-4x" aria-hidden="true"></a>
+      <a href='#' class="about-tab fa fa-address-book fa-4x" aria-hidden="true"></a>
+    </ul>
+
     <div id='landing'>
-      <div class="title-panda">
-        <img class="panda-icon" src="icons/dev-panda.png">
-        <h1 class="name">PANDA</h1>
-      </div>
-
-
-    <div class="icons">
-      <ul>
-        <a href="/github" class="fa fa-github fa-4x" aria-hidden="true"></a>
-        <a href="/" class="fa fa-home fa-4x" aria-hidden="true"></a>
-        <a href="/map" class="fa fa-map fa-4x" aria-hidden="true"></a>
-        <a id="about-tab" href="/about" class="fa fa-address-book fa-4x" aria-hidden="true"></a>
-      </ul>
-    </div>
-
-      <div class="body">
-        <div class="clear-fix"></div>
-        <button id="find-meetups" type="button">Find Meet Ups</button>
-      </div>
-    </div>
-    <div id="map" class="tab"></div>
-    <div id='main' class='section tab'>
-      <ul id="list-events"></ul>
-    </div>
-    <div id="aboutPage">
-      <p> Alexis: part of the best team in the world</p>
-      <p> Rylee: part of the best team in the world </p>
-      <p> Michael: part of the best team in the world </p>
-      <p> Stephanie: part of the best team in the world </p>
-    </div>
-
-
-
-      <div class="body">
-        <div class="clear-fix"></div>
-        <button id="find-meetups" type="button">Find Meet Ups</button>
-
       <div id="landing-body">
-        <p>Dev Panda is a quick, convienient way for developers to find and view tech meetups in their area.</p>
-        <p>With one click you can view local meetups, see details, and get an overall sense of what is happening in your area</p>
-
+        <p>Dev Panda is a quick, convienient way for developers to find and view tech meetups in their area.  With one click you can view local meetups, see details, and get an overall sense of what is happening in your area.</p>
       </div>
-      <button id="find-meetups" type="button">Find Meet Ups</button>
+      <button id="find-meetups" type="button">Find Meet Ups!</button>
     </div>
 
-
-    <div class='main'>
-      <div class="title-panda">
-        <img class="panda-icon" src="icons/dev-panda.png">
-        <h1 class="name">PANDA</h1>
-        <ul class="icons">
-          <a href="https://github.com/AlexisYan/dev-panda" class="fa fa-github fa-4x" aria-hidden="true"></a>
-          <a href='#' class="map-tab fa fa-map fa-4x" aria-hidden="true"></a>
-          <a href='#' class="about-tab fa fa-address-book fa-4x" aria-hidden="true"></a>
-        </ul>
-      </div>
-    </div>
     <div class='main' id='map'></div>
     <ul class='main' id="list-events"></ul>
 
     <div id="about-page">
-      <div class="title-panda">
-        <img class="panda-icon" src="icons/dev-panda.png">
-        <h1 class="name">PANDA</h1>
-        <ul class="icons">
-          <a href="https://github.com/AlexisYan/dev-panda" class="fa fa-github fa-4x" aria-hidden="true"></a>
-          <a href='#' class="map-tab fa fa-map fa-4x" aria-hidden="true"></a>
-          <a href='#' class="about-tab fa fa-address-book fa-4x" aria-hidden="true"></a>
-        </ul>
-      </div>
-      <div id="about-body">
-        <p> Alexis: part of the best team in the world</p>
-        <p> Rylee: part of the best team in the world </p>
-        <p> Michael: part of the best team in the world </p>
-        <p> Stephanie: part of the best team in the world </p>
-      </div>
+
+      <a href="#">
+        <div class='profile'>
+          <img class='profile-pic' src="icons/stephanie.jpg">
+          <div class='profile-body'>
+            <h3 class='profile-name'>Stephanie</h3>
+            <p class='profile-text'>I'm passionate about learning and love coding!</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="#">
+        <div class='profile'>
+          <img class='profile-pic' src="icons/Rylee.jpg">
+          <div class='profile-body'>
+            <h3 class='profile-name'>Rylee</h3>
+            <p class='profile-text'>Enjoys long walks on the beach and a mimosa in the sand. Part time ninja full time developer. Peace love and frybread grease.</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://github.com/MichaelWStuart">
+        <div class='profile'>
+          <img class='profile-pic' src="https://avatars3.githubusercontent.com/u/18186778?v=3&s=460">
+          <div class='profile-body'>
+            <h3 class='profile-name'>Michael</h3>
+            <p class='profile-text'>I love javascript and I love codefellows.  Need I say more?</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="#">
+        <div class='profile'>
+          <img class='profile-pic' src="#">
+          <div class='profile-body'>
+            <h3 class='profile-name'>Alexis</h3>
+            <p class='profile-text'>part of the best team in the world</p>
+          </div>
+        </div>
+      </a>
+
     </div>
-
-
 
     <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
-
-    <script src="/vendor/scripts/page.js"></script>
-    <script src="scripts/models/events.js" type="text/javascript"></script>
-    <script src="scripts/views/aboutView.js" type="text/javascript"></script>
-    <script src="scripts/views/eventView.js" type="text/javascript"></script>
-    <script src="scripts/views/landingPageView.js" type="text/javascript"></script>
-
-    <script src="scripts/views/currentView.js" type="text/javascript"></script>
-
     <script src="scripts/views.js" type="text/javascript"></script>
     <script src="scripts/events.js" type="text/javascript"></script>
-
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrkuWV8MgzB1vQZFVi6Nx8mhslLfufwR0&callback=initMap"
     async defer></script>
   </body>
