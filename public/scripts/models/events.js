@@ -43,6 +43,8 @@ const appendMapMarker = event => {
 }
 
 const renderMapData = data => {
+  $('#icons').show();
+  $('#find-meetups').hide();
   $('#map').show();
   initMap();
   data.forEach(event => {
