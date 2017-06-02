@@ -1,60 +1,70 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <script src="https://use.fontawesome.com/59f37b91f4.js"></script>
-  <link href="styles/base.css" rel="stylesheet" type="text/css">
-  <link href="styles/layout.css" rel="stylesheet" type="text/css">
-  <link href="styles/modules.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
-  <script id="eventlist-template" type="text/x-handlebars-template">
-    <ul class='event'>
-    <button class="delete-button" data-id='{{id}}'>X</button>
-    <h3>{{name}}</h3>
-    <h5>{{time}}</h5>
-    <li>
-
-      <a class="description" id="">Description &rarr;</a>
-      {{{description}}}
-      <a>{{link}}</a>
-      <p>{{fee.label}}</p>
-      <p>{{fee.amount}}</p>
-
-    </li>
-  </ul>
-  </script>
+  <head>
+    <script src="https://use.fontawesome.com/59f37b91f4.js"></script>
+    <link href="styles/base.css" rel="stylesheet" type="text/css">
+    <link href="styles/layout.css" rel="stylesheet" type="text/css">
+    <link href="styles/modules.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+    <script id="eventlist-template" type="text/x-handlebars-template">
+      <ul class='event'>
+        <button class="delete-button" data-id='{{id}}'>X</button>
+        <h3>{{name}}</h3>
+        <h5>{{time}}</h5>
+        <li>
+          <a class="description" id="">Description &rarr;</a>
+          {{{description}}}
+          <a>{{link}}</a>
+          <p>{{fee.label}}</p>
+          <p>{{fee.amount}}</p>
+        </li>
+      </ul>
+    </script>
   </head>
   <body>
 
-  <div id='landing' class='section'>
-    <div class="title-panda">
-      <img class="panda-icon" src="icons/dev-panda.png">
-      <h1 class="name">PANDA</h1>
-      <div class="icons" id="icons">
-        <ul>
-          <a href="/github" class="fa fa-github fa-4x" aria-hidden="true"></a>
-          <a href="/" class="fa fa-home fa-4x" aria-hidden="true"></a>
-          <a href="/map"class="fa fa-map fa-4x" aria-hidden="true"></a>
-          <a id="about-tab" href="/about" class="fa fa-address-book fa-4x" aria-hidden="true"></a>
-        </ul>
+    <div id='landing' class='section'>
+      <div class="title-panda">
+        <img class="panda-icon" src="icons/dev-panda.png">
+        <h1 class="name">PANDA</h1>
       </div>
-    </div>
-  </div>
-      <div class="body">
+      <div id="landing-body">
         <p>Dev Panda is a quick, convienient way for developers to find and view tech meetups in their area.</p>
-        <div class="clear-fix"></div>
-        <button id="find-meetups" type="button">Find Meet Ups</button>
+        <p>With one click you can view local meetups, see details, and get an overall sense of what is happening in your area</p>
       </div>
-    <div id="map" class="tab"></div>
-    <div id='main' class='section tab'>
+      <button id="find-meetups" type="button">Find Meet Ups</button>
+    </div>
+
+    <div id='main' class='section'>
+      <div class="title-panda">
+        <img class="panda-icon" src="icons/dev-panda.png">
+        <h1 class="name">PANDA</h1>
+      </div>
+      <ul class="icons" id="icons">
+        <a href="/github" class="fa fa-github fa-4x" aria-hidden="true"></a>
+        <a href="/" class="fa fa-home fa-4x" aria-hidden="true"></a>
+        <a href="/map"class="fa fa-map fa-4x" aria-hidden="true"></a>
+        <a id="about-tab" href="/about" class="fa fa-address-book fa-4x" aria-hidden="true"></a>
+      </ul>
       <ul id="list-events"></ul>
     </div>
-    <div id="aboutPage">
-      <p> Alexis: part of the best team in the world</p>
-      <p> Rylee: part of the best team in the world </p>
-      <p> Michael: part of the best team in the world </p>
-      <p> Stephanie: part of the best team in the world </p>
+
+    <div id="map"></div>
+
+    <div id="about-page">
+      <div class="title-panda">
+        <img class="panda-icon" src="icons/dev-panda.png">
+        <h1 class="name">PANDA</h1>
+      </div>
+      <div id="about--body">
+        <p> Alexis: part of the best team in the world</p>
+        <p> Rylee: part of the best team in the world </p>
+        <p> Michael: part of the best team in the world </p>
+        <p> Stephanie: part of the best team in the world </p>        
+      </div>
     </div>
+
     <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
