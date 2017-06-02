@@ -7,7 +7,7 @@ var app = app || {};
   aboutController.index = () => {
     $('.fa-address-book').show().siblings().hide();
 
-    app.ui();
+    app.aboutView.aboutPage();
   };
   module.aboutController = aboutController;
 })(app);
