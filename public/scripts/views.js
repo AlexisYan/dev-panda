@@ -34,4 +34,18 @@ function deleteEvents() {
   });
 }
 
-$(() => $('#find-meetups').on('click', () => $('#landing').hide()));
+$(() => {
+  $('#find-meetups').on('click', () => {
+    $('#landing').hide();
+    $('.main').show();
+  });
+  $('.map-tab').on('click', () => {
+    $('#landing').hide();
+    $('.main').show();
+  });
+  $('.about-tab').on('click', function(e){
+    e.preventDefault();
+    $('.main').hide();
+    $('#about-page').fadeIn('slow');
+  });
+});
