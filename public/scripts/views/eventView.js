@@ -1,7 +1,6 @@
 'use strict';
 
 function setTeasers() {
-  console.log($('#list-events p'));
   $('#list-events p').hide();
   $('.description').on('click', function(e) {
     console.log('show',this.parentNode.childNodes);
@@ -34,3 +33,5 @@ function deleteEvents() {
     eventData.forEach(event => appendMapMarker(event));
   });
 }
+
+$(() => $('#find-meetups').on('click', () => $('#landing').hide()));
