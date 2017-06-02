@@ -8,3 +8,7 @@ var app = app || {};
   };
   module.eventController = eventController;
 })(app);
+<<<<<<< Updated upstream
+=======
+s
+>>>>>>> Stashed changes
