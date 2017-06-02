@@ -30,7 +30,8 @@ const appendMapMarker = event => {
   let marker = new google.maps.Marker({
     position:{lat: event.group.lat, lng: event.group.lon},
     map,
-    title: icon: { url: 'icons/panda.svg' }
+    title: 'marker',
+    icon: { url: 'icons/panda.svg' }
   });
   let infoWindow = new google.maps.InfoWindow({
     content: `${event.description}`
