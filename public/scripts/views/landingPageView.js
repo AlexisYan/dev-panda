@@ -9,7 +9,7 @@ var app = app || {};
   landingView.landingPage = function(){
     $('#aboutPage').hide();
     $('#map').hide();
-    $('#icons').hide();
+    // $('#icons').hide();
   };
 
   landingView.landingPage();

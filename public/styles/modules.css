@@ -26,7 +26,6 @@
   display: inline-block;
   margin-right: 15%;
   margin-top: 0;
-  /*background-color: white;*/
 }
 .icons:visited{
   color: white;
@@ -60,11 +59,9 @@
   border: 10px solid white;
   margin-bottom: 20px;
 }
-/*#map {
-  display: none;
-}*/
 .panda-icon {
   background-color: black;
+}
 
 .event {
   width: 70%;
