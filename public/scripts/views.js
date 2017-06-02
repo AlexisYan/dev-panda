@@ -43,8 +43,26 @@ eventView.deleteEvents = function() {
 }
 <<<<<<< Updated upstream
 
+<<<<<<< HEAD:public/scripts/views/eventView.js
 $(() => $('#find-meetups').on('click', () => $('#landing').hide()));
 =======
 module.eventView = eventView;
 })(app);
 >>>>>>> Stashed changes
+=======
+$(() => {
+  $('#find-meetups').on('click', () => {
+    $('#landing').hide();
+    $('.main').show();
+  });
+  $('.map-tab').on('click', () => {
+    $('#landing').hide();
+    $('.main').show();
+  });
+  $('.about-tab').on('click', function(e){
+    e.preventDefault();
+    $('.main').hide();
+    $('#about-page').fadeIn('slow');
+  });
+});
+>>>>>>> 6bf503204dc3a61c472be4d973b29a871420f56f:public/scripts/views.js

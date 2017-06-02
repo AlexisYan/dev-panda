@@ -32,7 +32,7 @@ const appendMapMarker = event => {
   let marker = new google.maps.Marker({
     position:{lat: event.group.lat, lng: event.group.lon},
     map,
-    title: 'marker',
+    title: event.name,
     icon: { url: 'icons/panda.svg' }
   });
   let infoWindow = new google.maps.InfoWindow({
@@ -57,5 +57,13 @@ const renderMapData = data => {
   app.eventView.deleteEvents();
 };
 
-  $(() => fetchMeetupData(renderMapData));s
+<<<<<<< HEAD:public/scripts/models/events.js
+  $(() => fetchMeetupData(renderMapData));
 })(app);
+=======
+$(() => {
+  $('.main').hide();
+  $('#about-page').hide();
+  fetchMeetupData(renderMapData)
+});
+>>>>>>> 6bf503204dc3a61c472be4d973b29a871420f56f:public/scripts/events.js
