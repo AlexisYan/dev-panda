@@ -1,6 +1,4 @@
 'use strict';
-var app = app || {};
-(function(module){
 
 let map, latLon;
 let mapMarkers = [];
@@ -53,18 +51,13 @@ const renderMapData = data => {
     $('#list-events').append(template(event));
     appendMapMarker(event);
   });
-  app.eventView.setTeasers();
-  app.eventView.deleteEvents();
+  setTeasers();
+  deleteEvents();
 };
 
-<<<<<<< HEAD:public/scripts/models/events.js
-  $(() => fetchMeetupData(renderMapData));
-})(app);
-=======
 $(() => {
   $('#icons').hide();
   $('.main').hide();
   $('#about-page').hide();
   fetchMeetupData(renderMapData)
 });
->>>>>>> 6bf503204dc3a61c472be4d973b29a871420f56f:public/scripts/events.js
