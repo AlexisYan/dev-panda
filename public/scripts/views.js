@@ -25,7 +25,7 @@ function hideDescription() {
 
 function deleteEvents() {
   $('.delete-button').on('click',function(e) {
-    $(this.parentNode.childNodes).fadeOut(150)
+    $(this.parentNode).fadeOut(150)
     const eventId = typeof $(this).data('id') === 'number' ? $(this).data('id').toString() : $(this).data('id');
     eventData = eventData.filter(event => event.id !== eventId);
     mapMarkers.forEach(marker => marker.setMap(null));
