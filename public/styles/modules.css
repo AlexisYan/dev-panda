@@ -1,6 +1,5 @@
 
 .title-panda{
-  margin-left: 20%;
   display: block;
 }
 .panda-icon{
@@ -54,11 +53,6 @@
   margin-bottom: 60px;
 }
 
-#map{
-  margin-left: 10%;
-  border: 10px solid white;
-  margin-bottom: 20px;
-}
 .panda-icon {
   background-color: black;
 }

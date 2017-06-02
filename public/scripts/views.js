@@ -3,7 +3,6 @@
 function setTeasers() {
   $('#list-events p').hide();
   $('.description').on('click', function(e) {
-    console.log('show',this.parentNode.childNodes);
     $(this.parentNode.childNodes).fadeIn(150)
     $(this).text('Show Less -');
     $(this).addClass('show-less');
@@ -14,7 +13,6 @@ function setTeasers() {
 
 function hideDescription() {
   $('.show-less').off().on('click', function(e) {
-    console.log(e.target, 'hide', this.siblings);
     $(this).siblings().hide()
     $(this).text('Description ->');
     $(this).addClass('description');
@@ -38,6 +36,7 @@ $(() => {
   $('#find-meetups').on('click', () => {
     $('#landing').hide();
     $('.main').show();
+    $('#icons').show();
   });
   $('.map-tab').on('click', () => {
     $('#landing').hide();

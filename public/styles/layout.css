@@ -10,9 +10,10 @@ html, body {
 }
 
 #map {
-      height: 50%;
-      width: 75%;
-    }
+  height: 400px;
+  width: 100%;
+}
+
 .delete-button {
   position: relative;
   left: 20px;
