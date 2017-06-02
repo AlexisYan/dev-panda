@@ -30,6 +30,7 @@ const appendMapMarker = event => {
   let marker = new google.maps.Marker({
     position:{lat: event.group.lat, lng: event.group.lon},
     map,
+    title: 'marker',
     icon: { url: 'icons/panda.svg' }
   });
   let infoWindow = new google.maps.InfoWindow({
@@ -40,6 +41,8 @@ const appendMapMarker = event => {
 }
 
 const renderMapData = data => {
+  $('#icons').show();
+  $('#find-meetups').hide();
   $('#map').show();
   initMap();
   data.forEach(event => {

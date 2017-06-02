@@ -1,46 +1,51 @@
 
 .title-panda{
-  margin-left: 40%;
+  margin-left: 20%;
   display: block;
 }
 .panda-icon{
-  height:80px;
-  width: 80px;
+  height:160px;
+  width: 160px;
   float: left;
   display: inline-block;
   float: left;
-  margin-top: 7%;
+  margin-top: 5%;
+  box-shadow: 7px 7px 7px #000;
 }
 .name{
+  padding: 0;
+  margin: 0 auto;
   float: left;
   color: white;
-  font-size: 5em;
+  font-size: 13em;
   display: inline-block;
+  text-shadow: 7px 7px 7px #000;
+  margin-left: 3%;
 }
 .icons{
-  background-color: white;
-  display: block;
-  margin-top: 10px;
+  display: inline-block;
+  margin-right: 15%;
+  margin-top: 0;
+  /*background-color: white;*/
+}
+.icons:visited{
+  color: white;
 }
 
 .fa-github {
-  float:right;
   margin-left: 150px;
   text-align: center;
 
 }
 .fa-home{
-  float:right;
   margin-left: 150px;
   text-align: center;
 }
 .fa-map{
-  float:right;
   margin-left: 150px;
   text-align: center;
 }
 .fa-address-book {
-  float:right;
   margin-left: 150px;
   text-align: center;
 }
@@ -52,7 +57,14 @@
 
 #map{
   margin-left: 10%;
+  border: 10px solid white;
+  margin-bottom: 20px;
 }
+/*#map {
+  display: none;
+}*/
+.panda-icon {
+  background-color: black;
 
 .event {
   width: 70%;
