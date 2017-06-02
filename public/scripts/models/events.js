@@ -1,4 +1,6 @@
 'use strict';
+var app = app || {};
+(function(module){
 
 let map, latLon;
 let mapMarkers = [];
@@ -49,8 +51,9 @@ const renderMapData = data => {
     $('#list-events').append(template(event));
     appendMapMarker(event);
   });
-  setTeasers();
-  deleteEvents();
+  app.eventView.setTeasers();
+  app.eventView.deleteEvents();
 };
 
-$(() => fetchMeetupData(renderMapData));
+  $(() => fetchMeetupData(renderMapData));
+})(app);
