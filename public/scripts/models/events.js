@@ -40,6 +40,7 @@ const appendMapMarker = event => {
 }
 
 const renderMapData = data => {
+  $('#icons').show();
   $('#map').show();
   initMap();
   data.forEach(event => {
