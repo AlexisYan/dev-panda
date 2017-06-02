@@ -1,3 +1,3 @@
 # panda
 
-[View it on Heroku](https://dev-panda.herokuapp.com/)
+[View it on Heroku](https://devpanda.herokuapp.com)

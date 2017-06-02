@@ -62,6 +62,7 @@ const renderMapData = data => {
 })(app);
 =======
 $(() => {
+  $('#icons').hide();
   $('.main').hide();
   $('#about-page').hide();
   fetchMeetupData(renderMapData)
