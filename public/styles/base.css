@@ -4,3 +4,11 @@ ul li {
 p {
   color: black;
 }
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+button {
+  font-family: 'Quicksand', sans-serif;
+}
